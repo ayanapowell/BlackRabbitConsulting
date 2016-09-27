@@ -1,11 +1,11 @@
 <?php
 class Blank
 {
-    private $;
+    private $
 
-    function __construct($description)
+    function __construct()
     {
-      $this->description = $description;
+
     }
 
     function set()
@@ -15,13 +15,13 @@ class Blank
 
     function get()
     {
-      return ;
+      
     }
 
     function save()
     {
       $GLOBALS['DB']->exec("INSERT INTO tasks (description) VALUES ('{$this->getDescription()}');");
-      $this->id = $GLOBALS['DB']->lastInsertId();
+       $this->id = $GLOBALS['DB']->lastInsertId();
     }
 
     static function getAll()

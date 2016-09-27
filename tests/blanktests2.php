@@ -13,7 +13,6 @@
 
     class blankTests extends PHPUnit_Framework_TestCase
     {
-
         protected function tearDown()
         {
             Task::deleteAll();
