@@ -23,7 +23,7 @@ html,body {
 }
 
 body {
-	background-color: $blue;
+	background-color: $grey;
 	text-rendering: optimizeLegibility !important;
 	margin: 0 auto;
 	padding: 0;
@@ -32,7 +32,6 @@ body {
 	vertical-align: baseline;
 	outline: 0;
 	width: 100%;
-	visibility: hidden;
 }
 
 section {

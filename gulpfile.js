@@ -12,6 +12,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var order = require("gulp-order");
 var uglify = require('gulp-uglify');
 var livereload = require('gulp-livereload');
+var minifyCss = require('gulp-minify-css');
 
 var paths = {
 	js: [
@@ -38,7 +39,7 @@ gulp.task('sass',function(){
 		// concat = combine. Combine into one fatty css file
 		.pipe(concat('style.css'))
 		// shrink that file
-		.pipe(cleanCSS())
+		.pipe(minifyCss())
 		// Send that shrinked fatty css file to this location
 		.pipe(gulp.dest('web/assets/css'))
 		// This lets browsersync know to inject the styles into your page, no refresh needed.
