@@ -1,5 +1,5 @@
 var gulp = require('gulp');
-var minifyCss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var cssGlobbing = require('gulp-css-globbing');
 var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
@@ -38,7 +38,7 @@ gulp.task('sass',function(){
 		// concat = combine. Combine into one fatty css file
 		.pipe(concat('style.css'))
 		// shrink that file
-		.pipe(minifyCss())
+		.pipe(cleanCSS())
 		// Send that shrinked fatty css file to this location
 		.pipe(gulp.dest('web/assets/css'))
 		// This lets browsersync know to inject the styles into your page, no refresh needed.
@@ -78,7 +78,7 @@ gulp.task('js',function(){
 		.pipe(uglify())
 		// save that ugly file here
 		.pipe(gulp.dest('web/assets/js'))
-		.pipe(notify('js task finished'));
+		// .pipe(notify('js task finished'));
 });
 
 gulp.task('watch', function () {

@@ -1,8 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link href='/assets/css/style.css' rel='stylesheet' type='text/css'>
-</head>
+{% include 'inc/head-tag.html.twig' %}
 <body>
     <div class="container">
         <form action="/" method="post">
@@ -13,7 +9,7 @@
             <button type="submit" class="btn btn-info">GO!</button>
         </form>
     </div>
-
+    {% include 'inc/footer.html' %}
     <script src="/assets/js/app.min.js"></script>
 </body>
 </html>
