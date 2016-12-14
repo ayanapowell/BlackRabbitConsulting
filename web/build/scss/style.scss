@@ -1,0 +1,9 @@
+// Import from all other folders. But first import reset variables and mixins.
+// all scss files in these folders must start with an underscore. _example.scss, these are partials.
+
+// @import "config/reset";
+@import "config/base/variables";
+@import "config/base/mixins";
+@import "config/components/*";
+@import "config/*";
+@import "config/layout/*";

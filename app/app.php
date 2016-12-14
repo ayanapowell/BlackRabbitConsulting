@@ -7,13 +7,6 @@
     use Symfony\Component\Debug\Debug;
     Debug::enable();
 
-    session_start();
-    if (empty($_SESSION['current_user'])) {
-        $_SESSION['current_user'] = null;
-    }
-    // if (empty($_SESSION['search'])) {
-    //     $_SESSION['search'] = array();
-    // }
 
 // notifys silex exists
     $app = new Silex\Application();
@@ -26,6 +19,12 @@
     $password = 'root';
     $DB = new PDO($server, $username, $password);
 
+// Save user log-in in session
+    session_start();
+    if (empty($_SESSION['current_user'])) {
+        $_SESSION['current_user'] = null;
+    }
+// ==================================================================== //
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
     'twig.path' => __DIR__.'/../views'));
 
@@ -33,11 +32,11 @@
     Request::enableHttpMethodParameterOverride();
 
 // Homepage
-  $app->get("/", function() use ($app) {
-    return $app['twig']->render('index.html.twig', array('current_user' => $_SESSION['current_user'], 'alert' => null));
-  });
+    $app->get("/", function() use ($app) {
+        return $app['twig']->render('index.html.twig', array('current_user' => $_SESSION['current_user'], 'alert' => null));
+    });
 
-  // signup page
+ // signup page
     $app->get('/sign_up', function() use ($app) {
         return $app['twig']->render('sign_up.html.twig', array('alert' => null, 'current_user' => $_SESSION['current_user']));
     });
