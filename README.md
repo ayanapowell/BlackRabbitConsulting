@@ -1,8 +1,6 @@
-# _Coin Combinations_
+# _Black Rabbit Consulting_
 
-#### _Another exercise in PHP BDD and Testing_
-
-#### By _**A Couple of Helpless Epicodus Students**_
+#### By _**Ayana Powell**_
 
 ## Description
 
@@ -19,38 +17,11 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 _{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Specifications
+_Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur._ _Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
 
-#### Get an amount equally divisible by .01 and return amount of pennies ####
-__Input__: .04
-
-__Output__: 4 pennies
-
-#### Get an amount equally divisible by .05 and return amount of nickels  ####
-__Input__: .05
-
-__Output__: 1 nickel
-
-
-#### Get an amount equally divisible by .10 and return amount of dimes ####
-__Input__: .10
-
-__Output__: 1 dime
-
-
-#### Get an amount equally divisible by .25 and return amount of quarters  ####
-__Input__: .25
-
-__Output__: 1 quarter
-
-
-#### Get an unequal amount and sort by previous divisors ####
-__Input__: .41
-
-__Output__: 1 quarter, 1 dime, 1 nickel and 1 penny.
-
-
-
-
+## MVPs
+_Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua._
+_Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat._
 
 ## Known Bugs
 
