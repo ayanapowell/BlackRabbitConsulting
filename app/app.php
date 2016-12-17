@@ -18,7 +18,7 @@
     $username = 'root';
     $password = 'root';
     $DB = new PDO($server, $username, $password);
-
+  // To update password, run this command: SET PASSWORD = PASSWORD('root');
 // Save user log-in in session
     session_start();
     if (empty($_SESSION['current_user'])) {
