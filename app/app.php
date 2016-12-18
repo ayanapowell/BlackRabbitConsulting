@@ -1,4 +1,11 @@
 <?php
+
+// SETUP:
+// mysql.server start
+// mysql -uroot -proot
+// apachectl start
+// To update password, run this command: SET PASSWORD = PASSWORD('root');
+
     date_default_timezone_set('America/Los_Angeles');
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/User.php";
@@ -18,7 +25,7 @@
     $username = 'root';
     $password = 'root';
     $DB = new PDO($server, $username, $password);
-  // To update password, run this command: SET PASSWORD = PASSWORD('root');
+
 // Save user log-in in session
     session_start();
     if (empty($_SESSION['current_user'])) {

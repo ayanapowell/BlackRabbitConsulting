@@ -2,9 +2,9 @@
 
 #### By _**Ayana Powell**_
 
-## Description
+## Inspiration Board
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_https://projects.invisionapp.com/boards/YV333W2MT3F6X_
 
 ## Setup/Installation Requirements
 
