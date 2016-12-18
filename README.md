@@ -2,19 +2,12 @@
 
 #### By _**Ayana Powell**_
 
+## Description
+_A website for Black Rabbit to display their services_
+
 ## Inspiration Board
 
 _https://projects.invisionapp.com/boards/YV333W2MT3F6X_
-
-## Setup/Installation Requirements
-
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
-
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
 
 ## Specifications
 _Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur._ _Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum._
@@ -33,10 +26,15 @@ _{Let people know what to do if they run into any issues or have questions, idea
 
 ## Technologies Used
 
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+_SASS_
+_CSS_
+_Javascript_
+_PHP_
+_Silex_
+_Twig_
+_Gulp_
+_Node_
 
 ### License
 
-*{Determine the license under which this application can be used.  See below for more details on licensing.}*
-
-Copyright (c) 2016 **_{List of contributors or company name}_**
+Copyright (c) 2016 **_Ayana Powell_**
