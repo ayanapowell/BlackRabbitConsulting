@@ -13,10 +13,10 @@ h1, h2, h3, h4, h5, h6, p,label, a, li {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-	color: $darkgrey;
+	color: $grey;
 	font-weight: normal;
-	font-family: $cormorant;
 }
+
 p {
 	font-family: $cormorant;
 	font-size: get-vw(64px);

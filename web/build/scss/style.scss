@@ -4,6 +4,8 @@
 // @import "config/reset";
 @import "config/base/variables";
 @import "config/base/mixins";
+@import "config/base/buttons";
+@import "config/base/*";
 @import "config/components/*";
-@import "config/*";
 @import "config/layout/*";
+@import "config/*";

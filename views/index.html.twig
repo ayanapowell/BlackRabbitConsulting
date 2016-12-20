@@ -1,81 +1,20 @@
 {% include 'inc/head-tag.html.twig' %}
 <body>
-  <!-- Hidden navigation for mobile -->
-  <div class="responsive-nav-items hidden-nav" id="responsive-nav">
-		<div class="close-icon">
-			<img src="img/icons/close.svg" id="close-button">
-		</div>
-		<p class="nav-item">Concept</p>
-		<p class="nav-item">Products</p>
-		<p class="nav-item">Contact</p>
-		<div class="logo">
-			<img src="img/icons/logo.svg" alt="logo" id="logo"/>
-			<p><em>Black Rabbit</em></p>
-			<p><em>colbyhayden@blackrabbit.com</em></p>
-		</div>
-	</div>
-	<div class="overlays"></div>
+  <div class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__info">
+      <img src="https://s3-us-west-2.amazonaws.com/blackrabbitconsulting/images/tempicon.svg" class="hero__logo">
+      <h3>Consulting</h3>
+      <h2>Black Rabbit</h2>
+    </div>
+    <h1>A Competitive Advantage.</h1>
+    <button class="hero__btn btn">What we do</button>
+  </div>
 
-    <!-- Desktop Navigation top bar -->
-		<nav>
-			<h1 class="title">Black Rabbit</h1>
-			<div class="nav-items" id="nav">
-				<p class="nav-item">Concept</p>
-				<p class="nav-item">Products</p>
-				<p class="nav-item">Contact</p>
-				<div id="menu">☰</div>
-			</div>
-		</nav>
-		<div class="carousel-container">
-			<div class="my-carousel">
-				<div class="my-slide" style="background:url(assets/img/connect.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-				</div>
-				<div class="my-slide" style="background:url(assets/img/restaurant.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-				</div>
-				<div class="my-slide" style="background:url(assets/img/mic.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-				</div>
-			</div>
-			<div class="arrows"></div>
-		</div>
 
-		<!-- build an intro copy  WHAT IS THIS?????-->
 
-		<!-- build a grid of of items. 3 items in each row, each item has an image a title  and links to another page which will be a product detail page -->
-		<!-- use this as reference -->
-		<!-- https://red.org/red-products/ -->
-		<!-- <div class="grid">
-			<h1 class="darkaqua subject-header">Handmade Pieces</h1>
-			<div class="grid-container">
-				<a href ="#0" class="grid-item" style="background:url(img/pottery6.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-					<h2>View Collection</h2>
-				</a>
-				<a href ="#0" class="grid-item" style="background:url(img/pottery4.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-					<h2>View Collection</h2>
-				</a>
-				<a href ="#0" class="grid-item" style="background:url(img/pottery5.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-					<h2>View Collection</h2>
-				</a>
-				<a href ="#0" class="grid-item" style="background:url(img/pottery8.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-					<h2>View Collection</h2>
-				</a>
-				<a href ="#0" class="grid-item" style="background:url(img/pottery9.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-					<h2>View Collection</h2>
-				</a>
-				<a href ="#0" class="grid-item" style="background:url(img/pottery7.jpg) center center no-repeat;background-size:cover;">
-					<div class="overlay"></div>
-					<h2>View Collection</h2>
-				</a>
-			</div>
-		</div> -->
-  {% include 'inc/footer.html' %}
+
+
   <script src="/assets/js/app.min.js"></script>
 </body>
 </html>
