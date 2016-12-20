@@ -92,7 +92,7 @@ gulp.task('watch', function () {
     livereload.listen();
     gulp.watch('./web/build/scss/**/*.scss', ['sass'])
         .on('change', onChange);
-    gulp.watch('.web/build/scripts/**/*.js', ['js'])
+    gulp.watch('./web/build/scripts/**/*.js', ['js'])
         .on('change', onChange);
 });
 

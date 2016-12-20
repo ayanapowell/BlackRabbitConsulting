@@ -1,0 +1,116 @@
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3D3D3D;
+  z-index: 10;
+
+  .msg {
+    padding-top : 15vh;
+    font-family: $centurygothic;
+    color: $gold;
+  }
+
+  h1.msg{
+    @include font-size(70px);
+    animation: fadeInDown2 6.5s infinite;
+
+  }
+  .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+  }
+
+  .preloader1 {
+    animation: fadeInUp 6s infinite;
+  }
+
+  .preloader2 {
+    animation: fadeInDown 6s infinite;
+  }
+
+  .preloader3 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .preloader__circle {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #C04CFD;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+  }
+
+  .circle1 {
+    animation: rotate1 1s infinite linear;
+    border-color : $blacklightened;
+    height: 100px;
+    width: 100px;
+    margin: -50px;
+  }
+
+  .circle2 {
+    animation : rotate2 1s infinite linear;
+    border-color : $gold;
+    height: 70px;
+    width: 70px;
+    margin: -35px;
+  }
+
+  .circle3 {
+    animation: rotate3 1s infinite linear;
+    border-color : $goldlight;
+    height: 10px;
+    width: 10px;
+    margin: -5px;
+  }
+
+  .color2 { color : $gold; }
+  .color3 { color : $blacklightened; }
+  .color4 { color : $goldlight; }
+
+  @keyframes rotate1{
+    0% { transform: rotateZ(20deg) rotateY(0deg) }
+    100% { transform: rotateZ(100deg) rotateY(360deg) }
+  }
+
+  @keyframes rotate2{
+    0% { transform: rotateZ(100deg) rotateX(0deg) }
+    100% { transform: rotateZ(0deg) rotateX(360deg) }
+  }
+
+  @keyframes rotate3{
+    0% { transform: rotateZ(100deg) rotateX(-360deg) }
+    100% { transform: rotateZ(-360deg) rotateX(360deg) }
+  }
+
+  @keyframes fadeInUp{
+    0% { opacity : 0; margin-top : 20px; }
+    10% { opacity : 1; margin-top : 0px; }
+    45% { opacity : 1; margin-top : 0px; }
+    50% { opacity : 0; margin-top : 20px; }
+    100% { opacity : 0; margin-top : 20px; }
+  }
+
+  @keyframes fadeInDown{
+    0% { opacity : 0; margin-top : 0px; }
+    10% { opacity : 1; margin-top : 20px; }
+    45% { opacity : 1; margin-top : 20px; }
+    50% { opacity : 0; margin-top : 0px; }
+    100% { opacity : 0; margin-top : 0px; }
+  }
+
+  @keyframes fadeInDown2{
+    0% { opacity : 0; margin-top : -100px; }
+    55% { opacity : 0; margin-top : -100px; }
+    60% { opacity : 1; margin-top : -50px; }
+    90% { opacity : 1; margin-top : -50px; }
+    100% { opacity : 0; margin-top : 0px; }
+  }
+}

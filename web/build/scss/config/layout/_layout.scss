@@ -24,6 +24,9 @@ html,body {
 }
 
 body {
+	background: url('https://s3-us-west-2.amazonaws.com/blackrabbitconsulting/images/standingrock.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 	background-color: $grey;
 	text-rendering: optimizeLegibility !important;
 	margin: 0 auto;
@@ -48,7 +51,3 @@ section {
 .red {color:$red !important;}
 .green {color:$green !important;}
 .yellow {color:$yellow !important;}
-.burgundy {color:$burgundy !important;}
-.cyan {color:$cyan !important;}
-.darkblue {color:$darkblue !important;}
-.darkaqua {color:$darkaqua !important;}

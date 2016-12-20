@@ -5,23 +5,19 @@ $lora: 'Lora', serif; // 400, 700
 $cormorant: 'Cormorant Infant', serif; // 400, 500, 500i
 $raleway: 'Raleway', sans-serif; // 400, 600, 700
 $playfair: 'Playfair Display', serif; // 400, 700, 900
+$centurygothic: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
 
 
 // COLORS
 $black: #000000;
+$blacklightened: #1a1a1a;
 $grey: #f2f2f2;
 $greylight: #434343;
 $darkgrey: #37373f;
-$lightgrey: lighten($darkgrey, 30%);
 $white: #ffffff;
 $blue: #06369D;
 $red: #cd1231;
 $yellow: #fed430;
 $green: #0b6738;
-$burgundy: #72253C;
-$cyan: #9bcae8;
-$darkred: #202029;
-$darkbrown: #1e1414;
-$darkblue: #202029;
-$darkaqua: #527a7a;
-$gold: #c88937;
+$gold: #B88B4A;
+$goldlight: #DDCA7D;

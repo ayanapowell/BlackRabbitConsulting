@@ -23,6 +23,11 @@
 
 $break-med: 769px;
 $break-small: 768px;
+$break-xsmall: 480px;
+
+@mixin phone {
+	@media (max-width: $break-xsmall) { @content; }
+}
 
 @mixin mobile {
 	  @media (max-width: $break-small) { @content; }
