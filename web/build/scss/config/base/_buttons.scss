@@ -12,7 +12,6 @@ button {
     font-weight: 700;
     cursor: pointer;
     opacity: 0.8;
-
     @include mobile {
       background-color: $grey;
     }
