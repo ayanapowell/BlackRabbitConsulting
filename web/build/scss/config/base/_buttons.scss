@@ -1,5 +1,11 @@
 .hero__btn {
   width: 250px;
-  height: 5vh;
+  height: 4.3vh;
   background: transparent;
+  border: 3px solid $gold;
+  color: $gold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: $raleway;
+  font-weight: 700;
 }

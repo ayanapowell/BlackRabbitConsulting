@@ -17,8 +17,23 @@
 
   h1 {
     @include font-size(30px);
-    letter-spacing: 3px !important;
+    letter-spacing: 4px !important;
     margin-top: 40vh;
+    font-weight: 700;
+  }
+
+  .btn {
+    position: absolute;
+    margin-top: 46.5vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 4;
+// ----- MOBILE (768) ------ //
+    @include mobile {
+      margin-top: 48vh;
+    }
   }
 
   &__info {
@@ -30,8 +45,15 @@
     img {
       position: absolute;
       width: 10%;
-      margin-left: 45%;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
       z-index: 4;
+  // ----- MOBILE (768) ------ //
+      @include mobile {
+        width: 15%;
+      }
     }
 
     h2 {
@@ -46,7 +68,7 @@
       text-transform: uppercase;
     }
   }
-  
+
   &__overlay {
   	position: absolute;
   	top: 0;
