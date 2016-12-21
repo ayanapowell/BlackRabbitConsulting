@@ -4,7 +4,8 @@ var app = app || {};
    fadeIntoView : function () {
       setTimeout(function() {
         app.isVisible.els.tagline.animate({
-          'margin-top' : '0'
+          'margin-top' : '0',
+          'transition' : '0.5s ease all'
         });
       }, 4400);
    },
