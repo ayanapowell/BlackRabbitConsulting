@@ -3,11 +3,10 @@ var app = app || {};
   app.isVisible = {
    fadeIntoView : function () {
       setTimeout(function() {
-        alert("hi");
         app.isVisible.els.tagline.animate({
           'margin-top' : '0'
         });
-      }, 4800);
+      }, 4400);
    },
     init : function() {
       app.isVisible.els = {
