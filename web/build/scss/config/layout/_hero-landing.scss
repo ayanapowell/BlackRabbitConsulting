@@ -9,20 +9,12 @@
     text-align: center;
     z-index: 4;
   }
-  img.hero__nav-btn{
-    width: 3%;
-    position: absolute;
-    margin: 60px;
-    z-index: 5;
-    cursor: pointer;
-  }
-// center tagline and button
   &__tagline {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     position: relative;
 
     div {
@@ -52,7 +44,6 @@
 
 // top bar (logo and company name)
   &__info {
-    padding-top: 50px;
     position: relative;
     width: 40%;
     margin: 0 auto;
@@ -62,6 +53,7 @@
       width: 12%;
       margin-left: auto;
       margin-right: auto;
+      margin-top: 50px;
       left: 0;
       right: 0;
       z-index: 4;
@@ -73,7 +65,7 @@
 
     h2 { // title ('Black Rabbit')
       @include font-size(35px);
-      margin-top: 125px;
+      margin-top: 175px;
       text-transform: uppercase;
       position: absolute;
 
@@ -84,7 +76,7 @@
 
     h3 { // title ('Consulting')
       @include font-size(25px);
-      margin-top: 97px;
+      margin-top: 147px;
       text-transform: uppercase;
       position: absolute;
       @include phone {

@@ -2,10 +2,13 @@ var app = app || {};
 (function($){
   app.navigation = {
 // when menu icon clicked, show navigation menu, darken the rest of content
-    initiateOverlay : function () {
-      app.navigation.els.menuIcon.click(function() {
+    showNav : function () {
+      app.navigation.els.test.click(function() {
+        $(this).toggleClass('active');
         app.navigation.els.navBlock.css({ // display navigation
-          'display' : 'block'
+          'display' : 'block',
+          "opacity" : 0.99,
+          "transition" : "0s"
         });
         app.navigation.els.heroTagline.css({ // hide tagline
           'opacity' : '0',
@@ -26,6 +29,24 @@ var app = app || {};
         }, 200);
       });
     },
+    toggleNav : function () {
+      app.navigation.els.test.click(function() {
+        $(this).toggleClass('active'); // from menu to x button
+        app.navigation.els.navBlock.toggleClass('show-block'); // display navigation
+        app.navigation.els.heroTagline.toggleClass('hide-block'); // hide tagline
+        app.navigation.els.overlay.toggleClass('show-block');// darken window to show nav items
+        $('img.hero__logo').css({
+          'z-index': 100
+        })
+        setTimeout(function() {
+          app.navigation.els.navItems.each(function(i, el) { // fade in nav-items
+            var el = $(el);
+            el.toggleClass('show-block-slow');
+          });
+        }, 200);
+      });
+    },
+
     init : function() {
       app.navigation.els = {
         menuIcon : $('img.hero__nav-btn'),
@@ -33,8 +54,9 @@ var app = app || {};
         navBlock : $('nav'),
         navItems : $('.nav__item'),
         heroTagline : $('.hero__tagline h1'),
+        test : $('.interactive-menu-button a'),
       };
-      app.navigation.initiateOverlay();
+      app.navigation.toggleNav();
     }
   };
   jQuery(document).ready(function() {
