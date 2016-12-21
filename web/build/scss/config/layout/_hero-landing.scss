@@ -71,7 +71,7 @@
       }
     }
 
-    h2 {
+    h2 { // title ('Black Rabbit')
       @include font-size(35px);
       margin-top: 125px;
       text-transform: uppercase;
@@ -82,7 +82,7 @@
       }
     }
 
-    h3 {
+    h3 { // title ('Consulting')
       @include font-size(25px);
       margin-top: 97px;
       text-transform: uppercase;
@@ -96,20 +96,21 @@
     }
   }
 
-  &__overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-  	background-color: #1a1a1a;
-  	opacity: 0.8;
-  	z-index: 1;
-    transition: all 2.5s ease;
-  }
+// dont delete yet.
+  // &__overlay {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   width: 100%;
+  //   height: 100vh;
+  //   position: fixed;
+  //   top: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   left: 0;
+  // 	background-color: #1a1a1a;
+  // 	// opacity: 0.8;
+  // 	z-index: 1;
+  //   transition: all 2.5s ease;
+  // }
 }

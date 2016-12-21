@@ -1,21 +1,37 @@
 var app = app || {};
 (function($){
   app.navigation = {
-    modalShow : function () {
+    initiateOverlay : function () {
       app.navigation.els.menuIcon.click(function() {
         app.navigation.els.overlay.animate({
-          "z-index" : 10,
-          "opacity" : 1,
+          "opacity" : 0.99,
           "transition" : "0s"
-        }, 800);
+        }, 700);
+        setTimeout(function() {
+          app.navigation.slideNavItems();
+        }, 900);
       });
+   },
+
+   slideNavItems : function () {
+     app.navigation.els.navItems.each(function(i, el) {
+      var el = $(el);
+      setTimeout(function() {
+        el.css({
+          'align-self' : 'center',
+        });
+      }, 1000);
+     });
    },
     init : function() {
       app.navigation.els = {
         menuIcon : $('img.hero__nav-btn'),
-        overlay : $('div.hero__overlay'),
+        overlay : $('div.container__overlay'),
+        navBlock : $('nav'),
+        navItems : $('.nav__item'),
       };
-      app.navigation.modalShow();
+      app.navigation.initiateOverlay();
+      // app.navigation.slideNavItems();
     }
   };
   jQuery(document).ready(function() {
