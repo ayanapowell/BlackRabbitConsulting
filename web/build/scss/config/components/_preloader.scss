@@ -9,7 +9,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: $blacklightened;
+  background-color: lighten($blacklightened, 10%);
   z-index: 10;
 
 // tag line
