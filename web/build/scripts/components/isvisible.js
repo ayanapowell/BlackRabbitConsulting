@@ -7,7 +7,7 @@ var app = app || {};
           'margin-top' : '0',
           'transition' : '0.5s ease all'
         });
-      }, 4400);
+      }, 5000);
    },
     init : function() {
       app.isVisible.els = {

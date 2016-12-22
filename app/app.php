@@ -4,6 +4,7 @@
 // mysql.server start
 // mysql -uroot -proot
 // apachectl start
+// localhost:8080/phpmyadmin
 // To update password, run this command: SET PASSWORD = PASSWORD('root');
 
     date_default_timezone_set('America/Los_Angeles');
