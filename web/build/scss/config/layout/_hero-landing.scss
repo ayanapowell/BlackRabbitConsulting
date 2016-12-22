@@ -90,6 +90,10 @@
       right: 0;
       padding-right: 100px;
       cursor: pointer;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     h2 { // title ('Black Rabbit')
