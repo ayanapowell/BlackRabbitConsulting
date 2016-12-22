@@ -17,6 +17,12 @@
     height: 100vh;
     position: relative;
 
+    .btn {
+      position: absolute;
+      z-index: 6;
+      margin-top: 80px;
+    }
+
     div {
       display: flex;
       justify-content: center;
