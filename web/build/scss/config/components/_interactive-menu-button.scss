@@ -7,6 +7,11 @@
   justify-content: flex-end;
   align-content: center;
   // flex-direction: column;
+  &:hover {
+    width: 70%;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
 }
 
 .interactive-menu-button a span { // middle line in hamburger menu
@@ -17,11 +22,6 @@
   width: 100%;
   transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
   z-index: 6;
-
-  &:hover {
-    background-color: $grey;
-    transition: all 0.5s ease;
-  }
 }
 
 .interactive-menu-button a span:before, // top and bottom line in hamburger menu
@@ -35,11 +35,6 @@
   left: 0;
   transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
   z-index: 6;
-
-  &:hover {
-    background-color: $grey;
-    transition: all 0.2s ease;
-  }
 }
 
 .interactive-menu-button a span:after {

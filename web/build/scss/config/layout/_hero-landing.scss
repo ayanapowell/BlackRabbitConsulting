@@ -48,6 +48,10 @@
         @include font-size(28px);
       }
     }
+
+    &__button {
+      margin-top: 20px;
+    }
   }
 
 // top bar (logo and company name)
@@ -85,6 +89,7 @@
       z-index: 4;
       right: 0;
       padding-right: 100px;
+      cursor: pointer;
     }
 
     h2 { // title ('Black Rabbit')
@@ -109,6 +114,15 @@
     }
     @include mobile {
       width: 70%;
+    }
+
+    .scroll-to {
+      display: flex;
+      align-items: baseline;
+
+      img.icon {
+        position: absolute;
+      }
     }
   }
 

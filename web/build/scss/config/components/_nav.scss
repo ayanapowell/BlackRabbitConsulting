@@ -5,7 +5,6 @@ nav {
   width: 100%;
   z-index: 5;
   .nav-wrapper {
-    margin-top: 100px;
     margin-left: 100px;
     position: relative;
     @include phone {
@@ -42,6 +41,7 @@ nav {
     position: absolute;
     height: 10vh;
     width: 50px;
+    padding-top: 100px;
   }
 }
 
