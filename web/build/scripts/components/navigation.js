@@ -4,6 +4,7 @@ var app = app || {};
 // when menu icon clicked, show navigation menu, darken the rest of content
     toggleNav : function () {
       app.navigation.els.test.click(function() {
+        app.navigation.els.overlay.removeClass('hide-block');
         $(this).toggleClass('active'); // from menu to x button
         app.navigation.els.navBlock.toggleClass('show-block'); // display navigation
         app.navigation.els.heroTagline.toggleClass('hide-block'); // hide tagline

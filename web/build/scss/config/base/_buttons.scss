@@ -12,13 +12,54 @@ button {
     font-weight: 700;
     cursor: pointer;
     opacity: 0.8;
+    transition: 0.5 ease;
 
     &:hover {
-      background-color: $grey;
-      transition: all 0.5s ease;
+      background-color: #d9d9d9;
+      transition: all 0.8s ease;
     }
     @include mobile {
       background-color: $grey;
     }
+  }
+}
+
+a.animated-button {
+  @include font-size(12px);
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-family: $raleway;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 15px;
+  position: relative;
+  transition: background 0.3s ease-in 0.2s;
+
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: black;
+    transition: all 0.3s ease-out;
+    z-index: 16;
+  }
+  &:before {
+    opacity: 0;
+    bottom: 50%;
+  }
+  &:hover {
+    background: #f2f2f2;
+    transition: background 0.3s ease-in 0.2s;
+    z-index: 30;
+  }
+  &:hover:before {
+    bottom: 100%;
+    opacity: 1;
+    z-index: 30;
   }
 }

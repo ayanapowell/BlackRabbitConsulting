@@ -29,10 +29,7 @@ var app = app || {};
           'left' : '-100%',
           'opacity' : '0',
         }, 700);
-        app.preloader2.els.overlay.animate({ // fade in landing page
-          'opacity' : '0',
-          'z-index' : '-1'
-        });
+        app.preloader2.els.overlay.addClass('hide-block') // fade in landing page
       }, 1800);
     },
     init :  function() {
@@ -40,7 +37,7 @@ var app = app || {};
         helixWrapper : $('.helix-wrapper'),
         helixLoader : $('.helix-preloader'),
         helixText : $('.msg'),
-        overlay : $('.hero__overlay'),
+        overlay : $('.container__overlay'),
       };
       app.preloader2.hideHelix();
     }
