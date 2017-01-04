@@ -1,26 +1,43 @@
 var app = app || {};
 (function($){
   app.preloader = {
-  	fadeTitle : function () {
-      setTimeout(function() { // Hide animated circle, display company name
+  	fadeTitle2 : function () {
+      window.onload = function() {
+        // setTimeout(function() { // Hide animated circle, display company name
+          app.preloader.els.message.animate({
+            'opacity' : 1
+          });
+          app.preloader.els.preloaders.animate({
+            'opacity' : '0'
+          }, 600);
+        // }, 1800);
+
+        setTimeout(function() { // remove css animation
+          app.preloader.els.preloaderTitle.css({
+            'animation':'none'
+          });
+          app.preloader.els.preloaderTitle.animate({
+            'opacity': '0'
+          });
+          app.preloader.els.preloaderParent.animate({
+            'width' : '0',
+            'opacity': '0'
+          }, 700);
+          app.preloader.els.overlay.animate({
+            'opacity' : '0',
+            'z-index' : '-1'
+          });
+        }, 1400);
+      }
+  	},
+    fadeTitle : function () {
+      window.onload = function() {
         app.preloader.els.message.animate({
           'opacity' : 1
         });
         app.preloader.els.preloaders.animate({
           'opacity' : '0'
         }, 600);
-      }, 1800);
-
-      setTimeout(function() { // remove css animation
-        app.preloader.els.preloaderTitle.css({
-          'animation':'none'
-        });
-      }, 3200);
-
-      setTimeout(function() { // hide entire preloader to show landing page
-        app.preloader.els.preloaderTitle.animate({
-          'opacity': '0'
-        });
         app.preloader.els.preloaderParent.animate({
           'width' : '0',
           'opacity': '0'
@@ -29,8 +46,8 @@ var app = app || {};
           'opacity' : '0',
           'z-index' : '-1'
         });
-      }, 4800);
-  	},
+      }
+    },
     init : function() {
       app.preloader.els = {
     	  preloaderParent : $('#preloader'),
@@ -41,10 +58,9 @@ var app = app || {};
         overlay : $('.hero__overlay'),
       };
       app.preloader.fadeTitle();
-      // app.preloader.hidePreloader();
     }
   };
-  window.onload = function() {
+  jQuery(document).ready(function() {
     app.preloader.init();
-  }
+  });
 }(jQuery));

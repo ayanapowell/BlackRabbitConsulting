@@ -2,7 +2,7 @@ var app = app || {};
 (function($){
   app.navigation = {
 // when menu icon clicked, show navigation menu, darken the rest of content
-    toggleNav : function () {
+    toggleNavOld : function () {
       app.navigation.els.test.click(function() {
         app.navigation.els.overlay.removeClass('hide-block');
         $(this).toggleClass('active'); // from menu to x button
@@ -21,6 +21,13 @@ var app = app || {};
       });
     },
 
+    toggleNav : function() {
+      app.navigation.els.showNavButton.on('click', function() {
+        console.log("here");
+        app.navigation.els.hideNavButton.toggleClass('active'); // changes menu button to close button
+        app.navigation.els.navBlock.toggleClass('show');
+      });
+    },
     init : function() {
       app.navigation.els = {
         menuIcon : $('img.hero__nav-btn'),
@@ -28,7 +35,8 @@ var app = app || {};
         navBlock : $('nav'),
         navItems : $('.nav__item'),
         heroTagline : $('.hero__tagline h1'),
-        test : $('.interactive-menu-button a'),
+        showNavButton : $('.interactive-menu-button-wrapper'),
+        hideNavButton : $('.interactive-menu-button'),
       };
       app.navigation.toggleNav();
     }

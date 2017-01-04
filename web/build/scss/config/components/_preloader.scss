@@ -1,138 +1,140 @@
-// #preloader {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 100%;
-//   height: 100vh;
-//   position: fixed;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   background-color: lighten($blacklightened, 10%);
-//   z-index: 10;
-//
-// // tag line
-//   .msg {
-//     @include font-size(24px);
-//     padding-top : 180px;
-//     font-family: $centurygothic;
-//     color: $gold;
-//
-//     span:first-child {
-//       color: $grey;
-//     }
-//     span:last-child {
-//       color: $goldlight;
-//     }
-//   }
-//
-// // 'Black Rabbit' title
-//   h1.msg{
-//     @include font-size(70px);
-//     animation: fadeInDown2 8s;
-//     margin-top: -50px;
-//   }
-//
-// // preloader
-//   .preloader {
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate( -50%, -50% );
-//   }
-//
-//   .preloader1 { // circle
-//     animation: fadeInUp infinite;
-//     transition: all 0.5s ease;
-//   }
-//
-//   .preloader2 { // tagline
-//     animation: fadeInDown infinite;
-//     transition: all 0.5s ease;
-//   }
-//
-//   .preloader3 { // title
-//     width: 100%;
-//     text-align: center;
-//     opacity: 0;
-//     transition: all 2s ease;
-//   }
-//
-// // Animated circle
-//   .preloader__circle {
-//     position: absolute;
-//     display: block;
-//     border-radius: 50%;
-//     border: 2px solid #C04CFD;
-//     transform-origin: 50% 50%;
-//     transform-style: preserve-3d;
-//   }
-//
-//   .circle1 { // outer
-//     animation: rotate1 1s infinite linear;
-//     border-color : $grey;
-//     height: 100px;
-//     width: 100px;
-//     margin: -50px;
-//   }
-//
-//   .circle2 {  // inner
-//     animation : rotate2 1s infinite linear;
-//     border-color : $gold;
-//     height: 70px;
-//     width: 70px;
-//     margin: -35px;
-//   }
-//
-//   .circle3 { // innest
-//     animation: rotate3 1s infinite linear;
-//     border-color : $goldlight;
-//     height: 10px;
-//     width: 10px;
-//     margin: -5px;
-//   }
-//
-//   .color2 { color : $gold; }
-//   .color3 { color : $blacklightened; }
-//   .color4 { color : $goldlight; }
-//
-//   @keyframes rotate1{
-//     0% { transform: rotateZ(20deg) rotateY(0deg) }
-//     100% { transform: rotateZ(100deg) rotateY(360deg) }
-//   }
-//
-//   @keyframes rotate2{
-//     0% { transform: rotateZ(100deg) rotateX(0deg) }
-//     100% { transform: rotateZ(0deg) rotateX(360deg) }
-//   }
-//
-//   @keyframes rotate3{
-//     0% { transform: rotateZ(100deg) rotateX(-360deg) }
-//     100% { transform: rotateZ(-360deg) rotateX(360deg) }
-//   }
-//
-//   @keyframes fadeInUp{
-//     0% { opacity : 0; margin-top : 20px; }
-//     10% { opacity : 1; margin-top : 0px; }
-//     45% { opacity : 1; margin-top : 0px; }
-//     50% { opacity : 0; margin-top : 20px; }
-//     100% { opacity : 0; margin-top : 20px; }
-//   }
-//
-//   @keyframes fadeInDown{
-//     0% { opacity : 0; margin-top : 0px; }
-//     10% { opacity : 1; margin-top : 20px; }
-//     45% { opacity : 1; margin-top : 20px; }
-//     50% { opacity : 0; margin-top : 0px; }
-//     100% { opacity : 0; margin-top : 0px; }
-//   }
-//
-//   @keyframes fadeInDown2{
-//     0% { opacity : 0; margin-top : -100px; }
-//     55% { opacity : 0; margin-top : -100px; }
-//     60% { opacity : 1; margin-top : -50px; }
-//     90% { opacity : 1; margin-top : -50px; }
-//     100% { opacity : 0; margin-top : 0px; }
-//   }
-// }
+#preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: lighten($blacklightened, 10%);
+  z-index: 100;
+  transition: 1s ease;
+  transition-delay: 0.35s;
+
+// tag line
+  .msg {
+    @include font-size(24px);
+    padding-top : 180px;
+    font-family: $centurygothic;
+    color: $gold;
+
+    span:first-child {
+      color: $grey;
+    }
+    span:last-child {
+      color: $goldlight;
+    }
+  }
+
+// 'Black Rabbit' title
+  h1.msg{
+    @include font-size(70px);
+    animation: fadeInDown2 8s;
+    margin-top: -50px;
+  }
+
+// preloader
+  .preloader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+  }
+
+  .preloader1 { // circle
+    animation: fadeInUp infinite;
+    transition: all 0.5s ease;
+  }
+
+  .preloader2 { // tagline
+    animation: fadeInDown infinite;
+    transition: all 0.5s ease;
+  }
+
+  .preloader3 { // title
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+// Animated circle
+  .preloader__circle {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid #C04CFD;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+  }
+
+  .circle1 { // outer
+    animation: rotate1 1s infinite linear;
+    border-color : $grey;
+    height: 100px;
+    width: 100px;
+    margin: -50px;
+  }
+
+  .circle2 {  // inner
+    animation : rotate2 1s infinite linear;
+    border-color : $gold;
+    height: 70px;
+    width: 70px;
+    margin: -35px;
+  }
+
+  .circle3 { // innest
+    animation: rotate3 1s infinite linear;
+    border-color : $goldlight;
+    height: 10px;
+    width: 10px;
+    margin: -5px;
+  }
+
+  .color2 { color : $gold; }
+  .color3 { color : $blacklightened; }
+  .color4 { color : $goldlight; }
+
+  @keyframes rotate1{
+    0% { transform: rotateZ(20deg) rotateY(0deg) }
+    100% { transform: rotateZ(100deg) rotateY(360deg) }
+  }
+
+  @keyframes rotate2{
+    0% { transform: rotateZ(100deg) rotateX(0deg) }
+    100% { transform: rotateZ(0deg) rotateX(360deg) }
+  }
+
+  @keyframes rotate3{
+    0% { transform: rotateZ(100deg) rotateX(-360deg) }
+    100% { transform: rotateZ(-360deg) rotateX(360deg) }
+  }
+
+  @keyframes fadeInUp{
+    0% { opacity : 0; margin-top : 20px; }
+    10% { opacity : 1; margin-top : 0px; }
+    45% { opacity : 1; margin-top : 0px; }
+    50% { opacity : 0; margin-top : 20px; }
+    100% { opacity : 0; margin-top : 20px; }
+  }
+
+  @keyframes fadeInDown{
+    0% { opacity : 0; margin-top : 0px; }
+    10% { opacity : 1; margin-top : 20px; }
+    45% { opacity : 1; margin-top : 20px; }
+    50% { opacity : 0; margin-top : 0px; }
+    100% { opacity : 0; margin-top : 0px; }
+  }
+
+  @keyframes fadeInDown2{
+    0% { opacity : 0; margin-top : -100px; }
+    55% { opacity : 0; margin-top : -100px; }
+    60% { opacity : 1; margin-top : -50px; }
+    90% { opacity : 1; margin-top : -50px; }
+    100% { opacity : 0; margin-top : 0px; }
+  }
+}

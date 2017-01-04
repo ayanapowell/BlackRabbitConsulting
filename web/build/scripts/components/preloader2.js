@@ -3,21 +3,14 @@ var app = app || {};
   app.preloader2= {
     hideHelix : function () { // hide animated helix
       setTimeout(function() {
-        app.preloader2.els.helixLoader.animate({
-          opacity : 0,
-          transition: '1s ease',
-        });
-        app.preloader2.showLogo();
-      }, 2400);
-    },
-    showLogo : function () { // fade in title
-      setTimeout(function() {
-        app.preloader2.els.helixText.animate({
-          'opacity' : 1,
-          'transition' : '1s ease',
-        });
+        window.onload = function() {
+          app.preloader2.els.helixLoader.animate({
+            opacity : 0,
+            transition: '1s ease',
+          });
+        }
         app.preloader2.hidePreloader();
-      }, 1000);
+      }, 500);
     },
     hidePreloader : function () { // Hide entire preloader div
       setTimeout(function() {
@@ -30,7 +23,7 @@ var app = app || {};
           'opacity' : '0',
         }, 700);
         app.preloader2.els.overlay.addClass('hide-block') // fade in landing page
-      }, 1800);
+      }, 500);
     },
     init :  function() {
       app.preloader2.els = {
@@ -42,7 +35,7 @@ var app = app || {};
       app.preloader2.hideHelix();
     }
   };
-  window.onload = function() {
+  jQuery(document).ready(function() {
     app.preloader2.init();
-  }
+  });
 }(jQuery));
