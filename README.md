@@ -18,11 +18,11 @@ _Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliq
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_There are no known bugs_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_For questions, contact ayanapowell1@gmail.com_
 
 ## Technologies Used
 
