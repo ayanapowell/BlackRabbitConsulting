@@ -20,15 +20,8 @@ var app = app || {};
         }, 200);
       });
     },
-    test: function () {
-      app.navigation.els.test.on('click', function() {
-        $(this).addClass('no-hover');
-        $(this).addClass('active');
-      });
-    },
-    toggleNav : function () {
+    toggleNav : function () { // when menu icon clicked, show navigation menu, darken the rest of content
       app.navigation.els.showNavButton.on('click', function() {
-        console.log("here");
         app.navigation.els.hideNavButton.toggleClass('active'); // changes menu button to close button
         app.navigation.els.navBlock.toggleClass('show');
       });
@@ -42,10 +35,8 @@ var app = app || {};
         heroTagline : $('.hero__tagline h1'),
         showNavButton : $('.header__interactive-menu-button-wrapper'),
         hideNavButton : $('.interactive-menu-button'),
-        test: $('.animated-button'),
       };
       app.navigation.toggleNav();
-      app.navigation.test();
     }
   };
   jQuery(document).ready(function() {

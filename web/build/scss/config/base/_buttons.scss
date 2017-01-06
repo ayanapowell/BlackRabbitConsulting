@@ -70,7 +70,6 @@
       content: '';
       height: 2px;
       background: $blacklightened;
-      width: 100%;
       position: absolute;
       top: -10px;
       left: 0;
@@ -78,8 +77,12 @@
       z-index: 100;
     }
 
-    &:after {
+    &:before {
       width: 100%;
+    }
+
+    &:after {
+      width: 80%;
       align-self: flex-end;
       top: 10px;
     }
@@ -96,6 +99,8 @@
     &:after {
       transform: translateY(-10px) translateX(1px) rotate(-45deg);
       background-color: $grey;
+      width: 100%;
+      transition: width 0.3s ease;
     }
   }
 }
