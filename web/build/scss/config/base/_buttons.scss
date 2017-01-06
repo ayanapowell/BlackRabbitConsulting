@@ -4,7 +4,7 @@
   cursor: pointer;
   .animated-button {
     @include font-size(12px);
-    color: $black;
+    color: $grey;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-family: $raleway;
@@ -22,7 +22,7 @@
       bottom: 0;
       height: 2px;
       width: 100%;
-      background: black;
+      background: $grey;
       transition: all 0.3s ease-out;
       z-index: 10;
     }
@@ -31,7 +31,7 @@
       bottom: 50%;
     }
     &:not(.no-hover):hover {
-      color: $white;
+      color: $grey;
       background: $darkgrey;
       transition: background 0.3s ease-in 0.3s;
       z-index: 30;
@@ -40,9 +40,10 @@
       bottom: 100%;
       opacity: 1;
       z-index: 30;
+      background-color: $darkgrey;
     }
     &:active {
-      color: $black;
+      color: $darkgrey;
       background: transparent;
       transition: background 0.3s ease-in 0.3s;
       &:before {
@@ -54,12 +55,11 @@
 }
 
 // Navigtion button that displays nav items when clicked
-
 .interactive-menu-button { // width of hamburger menu
   span { // middle line in hamburger menu
     height: 2px;
     position: absolute;
-    background: $blacklightened;
+    background: $grey;
     text-indent: -999em;
     width: 100%;
     transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
@@ -69,8 +69,7 @@
     &:before, &:after { // top and bottom line in hamburger menu
       content: '';
       height: 2px;
-      background: $blacklightened;
-      width: 100%;
+      background: $grey;
       position: absolute;
       top: -10px;
       left: 0;
@@ -78,8 +77,12 @@
       z-index: 100;
     }
 
-    &:after {
+    &:before {
       width: 100%;
+    }
+
+    &:after {
+      width: 80%;
       align-self: flex-end;
       top: 10px;
     }
@@ -90,12 +93,13 @@
 
     &:before {
       transform: translateY(10px) translateX(1px) rotate(45deg);
-      background-color: $grey;
+      background-color: $blacklightened;
     }
 
     &:after {
       transform: translateY(-10px) translateX(1px) rotate(-45deg);
-      background-color: $grey;
+      background-color: $blacklightened;
+      width: 100%;
     }
   }
 }

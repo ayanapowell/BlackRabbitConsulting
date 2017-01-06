@@ -2,10 +2,12 @@
 .container {
   width: 100%;
   height: 100vh;
-  background: url('https://s3-us-west-2.amazonaws.com/blackrabbitconsulting/images/standingrock.jpg');
+  background: url('https://s3-us-west-2.amazonaws.com/ayanareikapowell/project_4/LES/les.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  justify-content: center;
 
 // darken landing page
   .container__overlay {
@@ -15,7 +17,7 @@
     right: 0;
     left: 0;
   	background-color: #1a1a1a;
-  	opacity: 0.3;
+  	opacity: 0.6;
   	z-index: 1;
     transition: all 0.8s ease;
   }

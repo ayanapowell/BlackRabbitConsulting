@@ -42,10 +42,10 @@ var app = app || {};
           'width' : '0',
           'opacity': '0'
         }, 700);
-        app.preloader.els.overlay.animate({
-          'opacity' : '0',
-          'z-index' : '-1'
-        });
+        // app.preloader.els.overlay.animate({
+        //   'opacity' : '0',
+        //   'z-index' : '-1'
+        // });
       }
     },
     init : function() {

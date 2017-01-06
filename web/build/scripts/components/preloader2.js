@@ -22,7 +22,7 @@ var app = app || {};
           'left' : '-100%',
           'opacity' : '0',
         }, 700);
-        app.preloader2.els.overlay.addClass('hide-block') // fade in landing page
+        // app.preloader2.els.overlay.addClass('hide-block') // fade in landing page
       }, 500);
     },
     init :  function() {
