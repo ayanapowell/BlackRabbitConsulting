@@ -13,7 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index:10;
+  z-index: 10;
   .nav__item {
     @include font-size(65px);
     @include line-height(120px);

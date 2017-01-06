@@ -20,8 +20,13 @@ var app = app || {};
         }, 200);
       });
     },
-
-    toggleNav : function() {
+    test: function () {
+      app.navigation.els.test.on('click', function() {
+        $(this).addClass('no-hover');
+        $(this).addClass('active');
+      });
+    },
+    toggleNav : function () {
       app.navigation.els.showNavButton.on('click', function() {
         console.log("here");
         app.navigation.els.hideNavButton.toggleClass('active'); // changes menu button to close button
@@ -35,10 +40,12 @@ var app = app || {};
         navBlock : $('nav'),
         navItems : $('.nav__item'),
         heroTagline : $('.hero__tagline h1'),
-        showNavButton : $('.interactive-menu-button-wrapper'),
+        showNavButton : $('.header__interactive-menu-button-wrapper'),
         hideNavButton : $('.interactive-menu-button'),
+        test: $('.animated-button'),
       };
       app.navigation.toggleNav();
+      app.navigation.test();
     }
   };
   jQuery(document).ready(function() {

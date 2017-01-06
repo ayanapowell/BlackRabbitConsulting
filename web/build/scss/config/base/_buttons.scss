@@ -1,5 +1,7 @@
 // Animated button that slides up 'What we do'
 .hero__button {
+  display: flex;
+  cursor: pointer;
   .animated-button {
     @include font-size(12px);
     color: $black;
@@ -28,74 +30,72 @@
       opacity: 0;
       bottom: 50%;
     }
-    &:hover {
+    &:not(.no-hover):hover {
       color: $white;
       background: $darkgrey;
-      // width: 100%;
       transition: background 0.3s ease-in 0.3s;
       z-index: 30;
     }
-    &:hover:before {
+    &:not(.no-hover):hover:before {
       bottom: 100%;
       opacity: 1;
       z-index: 30;
+    }
+    &:active {
+      color: $black;
+      background: transparent;
+      transition: background 0.3s ease-in 0.3s;
+      &:before {
+        bottom: 50%;
+        opacity: 0
+      }
     }
   }
 }
 
 // Navigtion button that displays nav items when clicked
-.interactive-menu-button-wrapper {
-  width: 50px;
-  height: 50px;
-  position: absolute;
-  z-index: 16;
-  margin: 100px;
-  cursor: pointer;
 
-  .interactive-menu-button { // width of hamburger menu
-    span { // middle line in hamburger menu
+.interactive-menu-button { // width of hamburger menu
+  span { // middle line in hamburger menu
+    height: 2px;
+    position: absolute;
+    background: $blacklightened;
+    text-indent: -999em;
+    width: 100%;
+    transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
+    z-index: 100;
+    margin-top: 20px;
+
+    &:before, &:after { // top and bottom line in hamburger menu
+      content: '';
       height: 2px;
-      position: absolute;
       background: $blacklightened;
-      text-indent: -999em;
       width: 100%;
+      position: absolute;
+      top: -10px;
+      left: 0;
       transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
-      z-index: 6;
-      margin-top: 20px;
-
-      &:before, &:after { // top and bottom line in hamburger menu
-        content: '';
-        height: 2px;
-        background: $blacklightened;
-        width: 100%;
-        position: absolute;
-        top: -10px;
-        left: 0;
-        transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
-        z-index: 6;
-      }
-
-      &:after {
-        width: 100%;
-        align-self: flex-end;
-        top: 10px;
-      }
+      z-index: 100;
     }
 
-    &.active span {
-      background: transparent;
+    &:after {
+      width: 100%;
+      align-self: flex-end;
+      top: 10px;
+    }
+  }
 
-      &:before {
-        transform: translateY(10px) translateX(1px) rotate(45deg);
-        background-color: $grey;
-        z-index: 100;
-      }
+  &.active span {
+    background: transparent;
 
-      &:after {
-        transform: translateY(-10px) translateX(1px) rotate(-45deg);
-        background-color: $grey;
-        z-index: 100;
-      }
+    &:before {
+      transform: translateY(10px) translateX(1px) rotate(45deg);
+      background-color: $grey;
+    }
+
+    &:after {
+      transform: translateY(-10px) translateX(1px) rotate(-45deg);
+      background-color: $grey;
     }
   }
 }

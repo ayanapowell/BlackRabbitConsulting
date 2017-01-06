@@ -1,6 +1,6 @@
 .hero {
   // display: none;
-  h1, h2, h3 {
+  h1{
     // position: absolute;
     font-family: $playfair;
     letter-spacing: 6px;
@@ -53,81 +53,7 @@
     }
   }
 
-// top bar (logo and company name)
-  &__info {
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
 
-    @include mobile {
-      padding-top: 8vh;
-    }
-
-    @include phone {
-      padding-top: 15vh;
-    }
-    img.hero__logo {
-      position: absolute;
-      width: 7vh;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 50px;
-      left: 0;
-      right: 0;
-      z-index: 4;
-      cursor: pointer;
-    }
-
-    p { // email
-      @include font-size(13px);
-      letter-spacing: 0.5px;
-      margin-top: 100px;
-      position: absolute;
-      font-family: $playfair;
-      color: $black;
-      z-index: 4;
-      right: 0;
-      padding-right: 100px;
-      cursor: pointer;
-
-      @include mobile {
-        display: none;
-      }
-    }
-
-    h2 { // title ('Black Rabbit')
-      @include font-size(35px);
-      margin-top: 110px;
-      text-transform: uppercase;
-      position: absolute;
-
-      @include phone {
-        @include font-size(30px);
-      }
-    }
-
-    h3 { // title ('Consulting')
-      @include font-size(25px);
-      margin-top: 85px;
-      text-transform: uppercase;
-      position: absolute;
-      @include phone {
-        @include font-size(20px);
-      }
-    }
-    @include mobile {
-      width: 70%;
-    }
-
-    .scroll-to {
-      display: flex;
-      align-items: baseline;
-
-      img.icon {
-        position: absolute;
-      }
-    }
-  }
 
 // dont delete yet.
   // &__overlay {
