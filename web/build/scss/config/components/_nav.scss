@@ -9,14 +9,14 @@
   transform:scale(0);
   opacity:0;
   transition:opacity 0.3s ease;
-  background-color: $black;
+  background-color:  #262626;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index:10;
   .nav__item {
     @include font-size(65px);
-    @include line-height(150px);
+    @include line-height(120px);
     font-family: $playfair;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -28,11 +28,30 @@
     transform: translateX(-5%);
     transition: 0.3s ease all;
     transition-delay: 0.35s;
+    &:after {
+      content: '';
+      background: transparent;
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 50%;
+      bottom: 0;
+      z-index: -1;
+      transition: width .5s ease, background-color .5s ease, left .5s ease;
+    }
     &:nth-child(2) {
       transition-delay: 0.4s;
+      margin: 55px 0px;
     }
     &:nth-child(3) {
       transition-delay: 0.45s;
+    }
+    &:hover {
+      &:after {
+        width: 100%;
+        left: 0;
+        background: $gold;
+      }
     }
   }
   // showing nav items
@@ -42,7 +61,7 @@
     transition:opacity 0.3s ease;
     .nav__item {
       opacity: 1;
-      transform: translateX(0);        
+      transform: translateX(0);
     }
   }
 }

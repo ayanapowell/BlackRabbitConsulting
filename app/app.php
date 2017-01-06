@@ -22,7 +22,7 @@
     $app['debug'] = true;
 
 // db connection info for local development
-    $server = 'mysql:host=localhost:8889;dbname=black_rabbit';
+    $server = 'mysql:host=localhost;dbname=black_rabbit';
     $username = 'root';
     $password = 'root';
     $DB = new PDO($server, $username, $password);
