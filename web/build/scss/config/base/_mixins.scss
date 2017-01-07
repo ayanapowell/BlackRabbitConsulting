@@ -37,6 +37,7 @@ $break-xsmall: 480px;
 	@media (min-width: $break-med) { @content; }
 }
 
+
 // How do you use these? Lets say you have a div that at desktop is 33.33% width because its in a grid
 // but at mobile it goes stacks and goes all the way across
 

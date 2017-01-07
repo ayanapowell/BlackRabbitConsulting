@@ -1,14 +1,26 @@
 header {
-  width: 70%;
-  margin-left: 15%;;
-  margin-top: 60px;
+  width: 100%;
+  // margin-left: 10%;;
+  padding-top: 20px;
   position: absolute;
   display: flex;
   flex-direction: row;
   z-index: 9;
+  padding: 0 50px;
 
+  .header__overlay {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: $grey;
+    opacity: 0.45;
+    z-index: -1;
+  }
   h1, h2, h3 {
-    font-family: $playfair;
+    font-family: audimat;
     letter-spacing: 5px;
     color: $black;
     height: 100%;
@@ -18,6 +30,7 @@ header {
 // top bar (logo and company name)
   .header__title {
     width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -31,16 +44,18 @@ header {
       height: auto;
     }
     h2 { // title ('Black Rabbit')
-      @include font-size(35px);
+      @include font-size(45px);
       margin-bottom: 0;
       text-transform: uppercase;
-      margin-top: 35px;
+      margin-top: 25px;
+      padding: 2px;
     }
     h3 {
       order: 1;
       @include font-size(25px);
       margin: 0;
-      padding-top: 10px;
+      padding-top: 3px;
+      padding-bottom: 20px;
     }
 
   }

@@ -1,20 +1,6 @@
 {% include 'inc/head-tag.html.twig' %}
 <body class="home">
-  <header>
-    <div class="header__hamburger-menu">
-      <div class="header__interactive-menu-button-wrapper">
-        <a href="#" class="interactive-menu-button"><span></span></a>
-      </div>
-    </div>
-    <div class="header__title">
-      <h2>Black</h2>
-      <!-- <div class="header__logo"> -->
-        <span><img src="https://s3-us-west-2.amazonaws.com/blackrabbitconsulting/images/logo.png"></span>
-      <!-- </div> -->
-      <h2>Rabbit</h2>
-      <h3>Consulting</h3>
-    </div>
-  </header>
+  {% include 'inc/header.html.twig' %}
   <div class="container">
     <div class="container__overlay"></div>
 <!-- ============= Website information  ================ -->
@@ -23,19 +9,13 @@
         <div>
           <h1>A Competitive Advantage.</h1>
           <div class="hero__button">
-            <a href="#" class="animated-button">WHAT WE DO</a>
+            <a href="/services" class="animated-button">WHAT WE DO</a>
           </div>
         </div>
       </div>
     </div>
 <!-- ================= Navigation ============= -->
-    <nav class="nav">
-      <ul>
-        <li class="nav__item">Services</li>
-        <li class="nav__item">About</li>
-        <li class="nav__item">Contact</li>
-      </ul>
-    </nav>
+    {% include 'inc/nav-items.html.twig' %}
   </div>
 <!-- ================ Preloader =============== -->
 

@@ -44,6 +44,9 @@
         return $app['twig']->render('index.html.twig', array('current_user' => $_SESSION['current_user'], 'alert' => null));
     });
 
+    $app->get("/services", function() use ($app) {
+      return $app['twig']->render('services.html.twig', array('current_user' => $_SESSION['current_user'], 'alert' => null));
+    });
  // signup page
     $app->get('/sign_up', function() use ($app) {
         return $app['twig']->render('sign_up.html.twig', array('alert' => null, 'current_user' => $_SESSION['current_user']));
