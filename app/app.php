@@ -22,12 +22,12 @@
     $app['debug'] = true;
 
 // db connection info for local development
-    $server = 'mysql:host=localhost;dbname=black_rabbit';
-    $username = 'root';
-    $password = 'root';
-    $DB = new PDO($server, $username, $password);
-
-// Save user log-in in session
+//     $server = 'mysql:host=localhost:8889;dbname=black_rabbit';
+//     $username = 'root';
+//     $password = 'root';
+//     $DB = new PDO($server, $username, $password);
+//
+// // Save user log-in in session
     session_start();
     if (empty($_SESSION['current_user'])) {
         $_SESSION['current_user'] = null;

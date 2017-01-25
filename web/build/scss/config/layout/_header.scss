@@ -19,9 +19,8 @@ header {
     opacity: 0.45;
     z-index: -1;
   }
-  h1, h2, h3 {
+  h1, h2, h3, p {
     font-family: audimat;
-    letter-spacing: 5px;
     color: $black;
     height: 100%;
     text-align: center;
@@ -29,7 +28,8 @@ header {
 
 // top bar (logo and company name)
   .header__title {
-    width: 100%;
+    // border: 2px solid red;
+    width: 50%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -43,12 +43,19 @@ header {
       width: 60px;
       height: auto;
     }
+    p {
+        align-self: flex-end;
+        @include font-size(12px);
+
+
+    }
     h2 { // title ('Black Rabbit')
       @include font-size(45px);
       margin-bottom: 0;
       text-transform: uppercase;
       margin-top: 25px;
       padding: 2px;
+      letter-spacing: 5px;
     }
     h3 {
       order: 1;
@@ -56,8 +63,27 @@ header {
       margin: 0;
       padding-top: 3px;
       padding-bottom: 20px;
+      letter-spacing: 5px;
     }
-
+  }
+  .header__contact-info {
+      align-self: center;
+      position: absolute;
+      right: 0;
+      p {
+          @include font-size(12px);
+          padding-right: 50px;
+          cursor: pointer;
+          &:hover {
+              &:after {
+                  content: '';
+                  width: 100px;
+                  height: 8px;
+                  color: $gold;
+                  transition: 0.8s ease;
+              }
+          }
+      }
   }
 
   .header__hamburger-menu {

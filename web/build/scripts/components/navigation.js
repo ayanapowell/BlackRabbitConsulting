@@ -6,14 +6,18 @@ var app = app || {};
       app.navigation.els.showNavButton.on('click', function() {
         app.navigation.els.hideNavButton.toggleClass('active'); // changes menu button to close button
         app.navigation.els.navBlock.toggleClass('show');
+        app.navigation.els.overlay.css({
+            'opacity': '0.8'
+        });
       });
     },
+
     init : function() {
       app.navigation.els = {
-        menuIcon : $('img.hero__nav-btn'),
+        // menuIcon : $('img.hero__nav-btn'),
         overlay : $('div.container__overlay'),
         navBlock : $('nav'),
-        navItems : $('.nav__item'),
+        // navItems : $('.nav__item'),
         heroTagline : $('.hero__tagline h1'),
         showNavButton : $('.header__interactive-menu-button-wrapper'),
         hideNavButton : $('.interactive-menu-button'),

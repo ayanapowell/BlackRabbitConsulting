@@ -4,7 +4,7 @@
   left: 0;
   right: 0 ;
   bottom: 0;
-  width:100%;
+  width:30%;
   height:100%;
   transform:scale(0);
   opacity:0;
@@ -15,8 +15,8 @@
   align-items: center;
   z-index: 10;
   .nav__item {
-    @include font-size(65px);
-    @include line-height(120px);
+    @include font-size(40px);
+    @include line-height(55px);
     font-family: $playfair;
     font-weight: 700;
     letter-spacing: 1.5px;
