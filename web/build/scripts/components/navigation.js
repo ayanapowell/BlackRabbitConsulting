@@ -6,9 +6,8 @@ var app = app || {};
       app.navigation.els.showNavButton.on('click', function() {
         app.navigation.els.hideNavButton.toggleClass('active'); // changes menu button to close button
         app.navigation.els.navBlock.toggleClass('show');
-        app.navigation.els.overlay.css({
-            'opacity': '0.8'
-        });
+        app.navigation.els.overlay.toggleClass('dim');
+        app.navigation.els.wrapperOverlay.toggleClass('dim');
         app.navigation.togglePageSlider();
       });
     },
@@ -25,9 +24,9 @@ var app = app || {};
         showNavButton : $('.menu-icon__wrapper'),
         hideNavButton : $('.menu-icon__button'),
         container1 : $('.container'),
-        container2 : $('body.services').find('hero'),
+        container2 : $('.hero'),
         header : $('header'),
-
+        wrapperOverlay: $('.wrapper__overlay')
       };
       app.navigation.toggleNav();
     }
