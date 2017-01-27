@@ -1,5 +1,6 @@
 .hero {
   // display: none;
+  margin: 0;
   h1{
     // position: absolute;
     font-family: $playfair;
@@ -50,6 +51,12 @@
 
     &__button {
       margin-top: 20px;
+    }
+  }
+  .hero__container {
+    &.slideToggle {
+        transform: translateX(30%);
+        transition: 0.5s ease all;
     }
   }
 

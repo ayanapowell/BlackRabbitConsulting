@@ -36,6 +36,6 @@ var app = app || {};
     }
   };
   jQuery(document).ready(function() {
-    app.preloader2.init();
+    // app.preloader2.init();
   });
 }(jQuery));

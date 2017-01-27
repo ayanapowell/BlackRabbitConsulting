@@ -9,18 +9,25 @@ var app = app || {};
         app.navigation.els.overlay.css({
             'opacity': '0.8'
         });
+        app.navigation.togglePageSlider();
       });
     },
-
+    togglePageSlider : function () {
+      var slidingElements = [app.navigation.els.container1, app.navigation.els.container2, app.navigation.els.header];
+      slidingElements.forEach(function(element) {
+        element.toggleClass('slideToggle');
+      });
+    },
     init : function() {
       app.navigation.els = {
-        // menuIcon : $('img.hero__nav-btn'),
         overlay : $('div.container__overlay'),
         navBlock : $('nav'),
-        // navItems : $('.nav__item'),
-        heroTagline : $('.hero__tagline h1'),
-        showNavButton : $('.header__interactive-menu-button-wrapper'),
-        hideNavButton : $('.interactive-menu-button'),
+        showNavButton : $('.menu-icon__wrapper'),
+        hideNavButton : $('.menu-icon__button'),
+        container1 : $('.container'),
+        container2 : $('body.services').find('hero'),
+        header : $('header'),
+
       };
       app.navigation.toggleNav();
     }

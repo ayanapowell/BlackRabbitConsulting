@@ -6,17 +6,18 @@
   bottom: 0;
   width:30%;
   height:100%;
-  transform:scale(0);
+  transform:translateX(-100%);
   opacity:0;
-  transition:opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   background-color:  #262626;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  z-index: 11;
+  transition: 0.5s ease all;
+  margin: 0;
   .nav__item {
-    @include font-size(40px);
-    @include line-height(55px);
+    @include font-size(50px);
     font-family: $playfair;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -26,7 +27,7 @@
     text-align: center;
     width: 100%;
     transform: translateX(-5%);
-    transition: 0.3s ease all;
+    transition: 0.2s ease all;
     transition-delay: 0.35s;
     &:after {
       content: '';
@@ -59,6 +60,8 @@
     transform:scale(1);
     opacity:1;
     transition:opacity 0.3s ease;
+    transition: 0.5s ease all;
+    margin: 0;
     .nav__item {
       opacity: 1;
       transform: translateX(0);

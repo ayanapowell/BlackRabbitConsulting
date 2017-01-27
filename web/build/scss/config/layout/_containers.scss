@@ -6,6 +6,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  transition: 0.5s ease all;
+  margin: 0;
 
 // darken landing page
   .container__overlay {
@@ -17,5 +19,16 @@
   	background-color: #1a1a1a;
   	opacity: 0.3;
   	z-index: 1;
+    margin: 0 !important;
+
+    &.dim {
+      opacity: 0.8;
+    }
+  }
+
+  &.slideToggle {
+      transform: translateX(30%);
+      transition: 0.5s ease all;
+      margin: 0 !important;
   }
 }
