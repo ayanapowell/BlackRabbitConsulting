@@ -11,7 +11,7 @@ var app = app || {};
    },
     init : function() {
       app.isVisible.els = {
-    	  tagline : $('.hero__tagline div:first-child'),
+    	  tagline : $('.container__hero-tagline div:first-child'),
       };
       app.isVisible.fadeIntoView();
     }
