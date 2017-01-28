@@ -30,7 +30,7 @@ var app = app || {};
         helixWrapper : $('.helix-wrapper'),
         helixLoader : $('.helix-preloader'),
         helixText : $('.msg'),
-        overlay : $('.container__overlay'),
+        // overlay : $('.container__overlay'),
       };
       app.preloader2.hideHelix();
     }

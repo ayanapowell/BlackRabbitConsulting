@@ -80,7 +80,7 @@
     position: absolute;
     background: $blacklightened;
     text-indent: -999em;
-    width: 50px;
+    width: 40px;
     transition: all 0.5s cubic-bezier(0, 0.275, 0.125, 1);
     z-index: 100;
     margin: 25px 0;
@@ -97,11 +97,11 @@
     }
 
     &:before {
-      width: 50px;
+      width: 40px;
     }
 
     &:after {
-      width: 40px;
+      width: 30px;
       align-self: flex-end;
       top: 10px;
     }

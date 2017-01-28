@@ -24,7 +24,7 @@
   }
 
   &.slideToggle {
-      transform: translateX(30%);
+      transform: translateX(25%);
       transition: 0.5s ease all;
       margin: 0 !important;
   }
@@ -49,7 +49,7 @@
       opacity: 0.5;
       transition: 0.5s ease all;
       z-index: 20;
-      transform: translateX(30%);
+      transform: translateX(25%);
     }
   }
 }
