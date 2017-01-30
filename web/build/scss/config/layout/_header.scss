@@ -1,6 +1,5 @@
 header {
   width: 100%;
-  // margin-left: 10%;;
   padding-top: 20px;
   position: absolute;
   display: flex;
@@ -8,6 +7,7 @@ header {
   z-index: 10;
   padding: 0 50px;
   transition: 0.5s ease;
+  height: 157px;
 
   .header__overlay {
     width: 100%;
