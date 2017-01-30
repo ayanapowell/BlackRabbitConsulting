@@ -1,6 +1,11 @@
 
 // All base type styles should go in here.
 
+@font-face{
+  font-family: audimat;
+  src: url(../fonts/audimat/AUdimat-Regular.otf);
+}
+
 ol,ul {
 	list-style-position: inside;
 	list-style: none;
