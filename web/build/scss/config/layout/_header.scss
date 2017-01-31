@@ -4,6 +4,8 @@ header {
   position: absolute;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   z-index: 10;
   padding: 0 50px;
   transition: 0.5s ease;
@@ -29,8 +31,6 @@ header {
 
 // top bar (logo and company name)
   .header__title {
-    // border: 2px solid red;
-    width: 50%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -43,10 +43,6 @@ header {
     img {
       width: 60px;
       height: auto;
-    }
-    p {
-        align-self: flex-end;
-        @include font-size(12px);
     }
     h2 { // title ('Black Rabbit')
       @include font-size(45px);
@@ -66,26 +62,46 @@ header {
     }
   }
   .header__contact-info {
-      align-self: center;
-      position: absolute;
-      right: 0;
-      a {
-          @include font-size(12px);
-          padding-right: 50px;
-          cursor: pointer;
-          &:hover {
-              &:after {
-                  content: '';
-                  width: 100px;
-                  height: 8px;
-                  color: $gold;
-                  transition: 0.8s ease;
-              }
-          }
+    position: absolute;
+    right: 0;
+    top: 0;
+    a {
+      cursor: pointer;
+      p {
+        @include font-size(12px);
+        color: $blacklightened;
+        letter-spacing: 0.3px;
+        padding-right: 50px;
+        padding-top: 60px;
       }
+    }
+    @include mobile {
+      display: none;
+    }
   }
+
   &.slideToggle {
       transform: translateX(25%);
       transition: 0.5s ease all;
+  }
+
+  @include phone {
+    .header__overlay {
+      height: 100px;
+    }
+    .header__title {
+      margin-left: 12%;
+      h2 {
+        @include font-size(30px);
+        margin-top: 0;
+
+      }
+      h3 {
+        @include font-size(22px);
+      }
+      img {
+        display: none;
+      }
+    }
   }
 }

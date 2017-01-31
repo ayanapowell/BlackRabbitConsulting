@@ -26,7 +26,8 @@ var app = app || {};
         container1 : $('.container'),
         container2 : $('.hero'),
         header : $('header'),
-        wrapperOverlay: $('.wrapper__overlay')
+        wrapperOverlay: $('.wrapper__overlay'),
+        grid : $('.brc-expertise'),
       };
       app.navigation.toggleNav();
     }
