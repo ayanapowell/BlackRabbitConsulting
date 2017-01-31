@@ -1,24 +1,22 @@
 var app = app || {};
 (function($){
   app.home = {
-  	linkToServicesPage : function () {
-      console.log("here");
-      app.home.els.heroButton.on('click', function() {
-        console.log('clicked');
-        $(this).addClass('no-hover');
-        $(this).addClass('active');
+    slideToGrid : function () {
+      app.home.els.button.on('click', function() {
+        $('html, body').animate({
+          scrollTop: app.home.els.button.offset().top
+        }, 'slow');
       });
-  	},
+    },
     init : function() {
       app.home.els = {
-        heroButton: $('.animated-button'),
+        button : $('a.animated-button'),
+        grid : $('.brc-expertise'),
       };
-      app.home.linkToServicesPage();
+      app.home.slideToGrid();
     }
   };
   jQuery(document).ready(function() {
-    console.log("sup");
-// Check to see we are on the correct page, if so, fire.
   	if ( $('body').hasClass('home') ) {
 	    app.home.init();
   	}
