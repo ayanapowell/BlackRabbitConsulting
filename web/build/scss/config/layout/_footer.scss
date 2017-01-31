@@ -3,13 +3,11 @@ footer {
   width: 100%;
   margin-top: 100px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 30px;
   p {
-    position: absolute;
-    bottom: 0;
     font-family: $raleway;
     padding-bottom: 30px;
   }
@@ -30,7 +28,6 @@ footer {
 
     .footer__column-social {
       display: flex;
-      margin-bottom: 30px;
 
       a {
         cursor: pointer;

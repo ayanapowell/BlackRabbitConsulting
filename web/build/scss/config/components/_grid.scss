@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 50px;
 
     h3 {
@@ -47,12 +47,12 @@
       justify-content: center;
       align-items: center;
 
+      img, h3, p, a {
+          padding: 20px 0;
+      }
+
       img {
         width: 18%;
-        margin: 0 !important;
-        padding: 0 !important;
-        position: absolute;
-        top: 0;
       }
 
       h3, p {
@@ -75,8 +75,6 @@
       }
 
       a {
-        position: absolute;
-        bottom: 0;
         cursor: pointer;
         z-index: 20;
       }
