@@ -3,8 +3,8 @@
   display: flex;
   cursor: pointer;
   .animated-button {
-    @include font-size(12px);
-    color: $black;
+    @include font-size(15px);
+    color: $grey;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-family: $raleway;
@@ -22,16 +22,17 @@
       bottom: 0;
       height: 2px;
       width: 100%;
-      background: black;
+      background: $grey;
       transition: all 0.3s ease-out;
       z-index: 10;
     }
     &:before {
       opacity: 0;
       bottom: 50%;
+      background: $darkgrey;
+      height: 4px;
     }
     &:not(.no-hover):hover {
-      color: $white;
       background: $darkgrey;
       transition: background 0.3s ease-in 0.3s;
       z-index: 30;
@@ -47,7 +48,7 @@
       transition: background 0.3s ease-in 0.3s;
       &:before {
         bottom: 50%;
-        opacity: 0
+        opacity: 0;
       }
     }
   }
