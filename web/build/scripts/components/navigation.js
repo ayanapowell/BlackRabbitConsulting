@@ -8,13 +8,6 @@ var app = app || {};
         app.navigation.els.navBlock.toggleClass('show');
         app.navigation.els.overlay.toggleClass('dim');
         app.navigation.els.wrapperOverlay.toggleClass('dim');
-        app.navigation.togglePageSlider();
-      });
-    },
-    togglePageSlider : function () {
-      var slidingElements = [app.navigation.els.container1, app.navigation.els.container2, app.navigation.els.header];
-      slidingElements.forEach(function(element) {
-        element.toggleClass('slideToggle');
       });
     },
     init : function() {
