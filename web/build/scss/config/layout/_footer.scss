@@ -37,10 +37,23 @@ footer {
       .footer__column-icon {
         @include font-size(30px);
         padding: 0 10px;
-
-        &:hover {
-          color: $grey;
+        transition:color 0.2s ease;
+        &.fa-facebook {
+          &:hover {
+            color:#3b5998;
+          }
         }
+        &.fa-instagram {
+          &:hover {
+            color:#bc2a8d;
+          }
+        }
+        &.fa-twitter {
+          &:hover {
+            color:#1da1f2;
+          }
+        }
+        
       }
     }
   }
