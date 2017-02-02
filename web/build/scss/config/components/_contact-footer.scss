@@ -1,0 +1,76 @@
+.footer-contact { // parent
+  background:  linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)
+    ), url('https://s3-us-west-2.amazonaws.com/blackrabbitconsulting/images/cork.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+
+  h1, h2 {
+    color: $grey;
+
+  }
+
+  .footer-contact__content { // content wrapper
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .row {
+      width: 100%;
+      height: 35%;
+      h1 { // ROW 1
+        @include font-size(60px);
+        margin: 0;
+        padding-top: 40px;
+        color: $grey;
+        font-family: $cormorant;
+        border-bottom: 2px solid $gold;
+        padding-bottom: 1px;
+      }
+    }
+
+    .footer-contact__content-info { // row 2
+      height: 65%;
+      width: 100%;
+      // border: 2px solid blue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .footer-contact__content-column { // column1
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // border: 0.5px red solid;
+        h2 {
+          @include font-size(20px);
+          font-family: $ptsans;
+        }
+        button {
+          @include font-size(15px);
+          color: $grey;
+          font-family: $raleway;
+          font-weight: 700;
+          letter-spacing: 1.3px;
+          text-transform: uppercase;
+          border: 3px solid $gold;
+          background: transparent;
+          align-self: center;
+          width: 150px;
+          height: 65px;
+          transition: 0.5s ease;
+          &:hover {
+            background-color: $gold;
+          }
+        }
+      }
+    }
+  }
+
+}

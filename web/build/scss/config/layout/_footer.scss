@@ -1,15 +1,16 @@
 footer {
-  background-color: $greylight;
   width: 100%;
-  margin-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 30px;
+  position: relative;
+  background-color: $darkgrey;
+
   p {
     font-family: $raleway;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
+    z-index: 2;
   }
   .footer__column {
     padding-top: 30px;
@@ -24,6 +25,7 @@ footer {
       font-family: $ptsans;
       text-transform: uppercase;
       color: $grey;
+      z-index: 2;
     }
 
     .footer__column-social {
@@ -53,7 +55,7 @@ footer {
             color:#1da1f2;
           }
         }
-        
+
       }
     }
   }
