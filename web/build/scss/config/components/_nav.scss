@@ -35,16 +35,19 @@
       transform: translateX(-5%);
       transition: 0.2s ease all;
       transition-delay: 0.35s;
-      &:after {
-        content: '';
-        background: transparent;
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        // left: 50%;
-        bottom: 0;
-        z-index: -1;
-        transition: width .5s ease, background-color .5s ease, left .5s ease;
+      a {
+        position:relative;
+          &:after {
+          position: absolute;
+          content: '';
+          background: transparent;
+          left:0;
+          bottom: 0;
+          width: 0;
+          height: 2px;
+          // z-index: -1;
+          transition: width .5s ease, background-color .5s ease, left .5s ease;
+        }
       }
       &:first-child {
         // margin-top: 90%;
@@ -63,10 +66,11 @@
       }
 
       &:hover {
-        &:after {
-          width: 100%;
-          left: 0;
-          background: $gold;
+        a {
+          &:after {
+            width: 100%;
+            background: $gold;
+          }
         }
       }
     }
