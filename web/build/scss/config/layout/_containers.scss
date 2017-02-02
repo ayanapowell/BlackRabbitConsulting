@@ -47,9 +47,7 @@
     z-index: 10;
     &.dim {
       opacity: 0.5;
-      transition: 0.5s ease all;
       z-index: 20;
-      transform: translateX(25%);
     }
   }
 }
@@ -67,6 +65,12 @@
     width: 100%;
     height: calc(100vh - 157px);
     position: relative;
+    &.show {
+      div {
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
     .btn {
       position: absolute;
       z-index: 16;
@@ -78,8 +82,9 @@
       justify-content: center;
       align-items: center;
       flex-wrap: wrap;
-      margin-top: 150px;
-      transition: 1s ease all;
+      opacity:0;
+      transform:translateY(5%);
+      transition: all 1s ease;
     }
 
     h1 { // tagline

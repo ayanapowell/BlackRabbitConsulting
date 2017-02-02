@@ -3,15 +3,12 @@ var app = app || {};
   app.isVisible = {
    fadeIntoView : function () {
       setTimeout(function() {
-        app.isVisible.els.tagline.animate({
-          'margin-top' : '0px',
-          'transition' : '0.5s ease all'
-        });
-      }, 1000);
+        app.isVisible.els.tagline.addClass('show');
+      }, 500);
    },
     init : function() {
       app.isVisible.els = {
-    	  tagline : $('.container__hero-tagline div:first-child'),
+    	  tagline : $('.container__hero-tagline'),
       };
       app.isVisible.fadeIntoView();
     }

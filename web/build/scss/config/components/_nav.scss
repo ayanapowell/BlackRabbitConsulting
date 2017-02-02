@@ -9,7 +9,7 @@
   display: flex;
   // justify-content: center;
   flex-direction: column;
-  z-index: 10;
+  z-index: 25;
   transition: 0.5s ease all;
   margin: 0;
   overflow-y: auto;
@@ -134,7 +134,6 @@
   // showing nav items
   &.show {
     transform:translateX(0);
-    z-index: 20;
     transition: 0.5s ease all;
     li.nav__item {
       opacity: 1;
