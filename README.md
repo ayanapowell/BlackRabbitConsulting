@@ -9,6 +9,15 @@ _A website for Black Rabbit to display their services_
 
 _https://projects.invisionapp.com/boards/YV333W2MT3F6X_
 
+## Setup/Installation Instructions
+
+Clone the repository
+Using the command line, navigate to the project's root directory
+Install dependencies by running $ composer install
+Install dependencies by running $ npm install
+Navigate to the /web directory and start a local server with $ php -S localhost:8000
+Open a browser and go to the address http://localhost:8000 to view the application
+
 ## Known Bugs
 
 _There are no known bugs_
