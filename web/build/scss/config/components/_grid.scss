@@ -1,4 +1,6 @@
 .brc-expertise {
+  max-width: 1280px;
+  margin:0 auto;
   .brc-expertise__mission-statement {
     height: 20%;
     width: 100%;
@@ -31,7 +33,7 @@
     width: 80%;
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items:flex-start;
     justify-content:center;
     flex-wrap:wrap;
     margin:0 auto;
