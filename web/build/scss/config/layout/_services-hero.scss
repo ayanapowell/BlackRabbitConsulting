@@ -51,7 +51,11 @@
     font-family: $cormorant;
     color: $quote;
     font-weight: 700;
-    padding: 20px 15%;
+    padding: 20px 10%;
+    text-align: center;
+    span {
+      color: $gold;
+    }
   }
   .content__row {
     min-height: 150px;
