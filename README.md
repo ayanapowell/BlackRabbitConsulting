@@ -4,6 +4,7 @@
 
 ## Description
 _A website for Black Rabbit to display their services_
+_This site can be viewed at: http://blackrabbitconsulting.com/_
 
 ## Inspiration Board
 
